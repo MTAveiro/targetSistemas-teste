@@ -1,0 +1,29 @@
+import json
+with open("dados.json") as file: 
+  dados = json.load(file)
+  x = 0
+  contaMedia=0
+  media = 0
+  max = 0
+  min = 9999999999999
+  diamin = 0
+  diasmedia=0
+  
+  while (x < 30):
+    if dados [x] ["valor"] != 0.0:
+      media = media +dados [x] ["valor"]
+      contaMedia= contaMedia+1
+      if dados [x] ["valor"] < min:
+        min = dados [x] ["valor"]
+        diamin = dados [x] ["dia"]
+      if dados [x] ["valor"] > max:
+        max = dados [x] ["valor"]
+        dia = dados [x] ["dia"]
+    x   = x + 1
+  x=0
+  while (x < 30):
+    if dados [x] ["valor"] > media/contaMedia:
+        diasmedia = diasmedia+1
+    x   = x + 1
+  
+print( "O menor valor de faturamento ocorrido em um dia do mês é ", min, " no dia ", diamin, "\nO maior valor de faturamento ocorrido em um dia do mês é ", max, "no dia", dia, "\nNúmero de dias no mês em que o valor de faturamento diário foi superior à média mensal:", diasmedia)
