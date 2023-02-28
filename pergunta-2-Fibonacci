@@ -1,0 +1,14 @@
+FIBONACCI = 0
+SOMA = 1
+K = 1
+NUMERO = int(input())
+
+
+while K < NUMERO:
+  SOMA = FIBONACCI + K
+  K = FIBONACCI;
+  FIBONACCI = SOMA
+  if SOMA == NUMERO:
+    print (f'o número {NUMERO} é parte da sequencia de Fibonacci')
+if K > NUMERO:
+  print (f'o número {NUMERO} não é parte da sequencia de Fibonacci')
