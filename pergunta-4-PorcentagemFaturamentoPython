@@ -1,0 +1,13 @@
+SP =67836.43
+RJ =36678.66
+MG =29229.88
+ES =27165.48
+Outros =19849.53
+soma = SP+RJ+MG+ES+Outros
+umCent= soma/100
+percentSP = SP/umCent
+percentRJ = RJ/umCent
+percentMG = MG/umCent
+percentES = ES/umCent
+percentOutros = Outros/umCent
+print ('Do total mensal da distribuidora, São Paulo equivale a ',round(percentSP, 1), '%, Rio de Janeiro equivale a',round(percentRJ, 1), '%, Minas Gerais equivale a',round(percentMG, 1), '%, Espirito Santo equivale a',round(percentES, 1), '%, Outros estados equivalem a',round(percentOutros, 1), '%. As porcentagens foram arrendodadas para melhor visualização, limitadas a uma casa decimal')
