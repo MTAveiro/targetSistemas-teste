@@ -1,0 +1,9 @@
+def espelhar(text):
+    reverso = ''
+    for letra in text:
+        reverso = letra + reverso  # appending chars in reverse order
+    return reverso
+
+texto = input()
+
+print('Texto invertido =', espelhar(texto))
